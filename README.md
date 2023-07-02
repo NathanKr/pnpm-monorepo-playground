@@ -1,13 +1,43 @@
 <h2>Motivation</h2>
-Experiment with pnpm which is uses linking strategy to reduces disk space usage and speeds up the installation process
+<ul>
+<li>Experiment with pnpm which uses linking strategy to reduces disk space usage and speeds up the installation process</li>
+<li>Experiment with pnpm to create and use monorepo</li>
+</ul>
+
 
 <h2>Setup</h2>
-install once pnpm globally (must ??)
+<ul>
+<li>create package file
+
+```
+pnpm init
+```
+
+</li>
+<li>install once pnpm globally 
+
+```
+npm i -g pnpm
+```
+
+</li>
+
+<li>monorepo is defines using pnpm-lock.yaml as follows 
+
+```
+packages:
+  - packages/*
+```
+
+The above looks for package.json under childs of packages directory
+</li>
+
+</ul>
+
 
 
 <h2>Usage</h2>
-invoke one
-
+The following will invoke pnpm for all directories defined in pnpm-workspace.yaml
 ```
 pnpm i
 ```
@@ -18,4 +48,4 @@ remove node_modules
 pnpm i
 ```
 
-The second time will be x10 time faster because the files all ready are on the local .pnpm store
+The second time will be faster because the files all ready are on the local .pnpm store
