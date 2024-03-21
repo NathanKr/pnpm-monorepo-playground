@@ -49,3 +49,7 @@ pnpm i
 ```
 
 The second time will be faster because the files all ready are on the local .pnpm store
+
+
+<h2>open issues</h2>
+can i use pnpm to build all projects
